@@ -70,7 +70,6 @@ class MealDetailScreen extends StatelessWidget {
                         child: Text('# ${index + 1}'),
                       ),
                       title: Text(selectedMeal.steps[index]),
-                      
                     ),
                     Divider()
                   ],
@@ -80,6 +79,12 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.delete),
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
       ),
     );
   }
